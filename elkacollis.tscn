@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvuvndpupi6gu"]
+
+[ext_resource type="PackedScene" uid="uid://ms80tjt4gnd4" path="res://assets/ELKA.glb" id="1_47kib"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ei4ua"]
+height = 5.58962
+radius = 0.729914
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="ELKA" parent="." instance=ExtResource("1_47kib")]
+transform = Transform3D(14, 0, 0, 0, 14, 0, 0, 0, 14, 0, -0.753689, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(13.9632, 0, -1.01486, 0, 14, 0, 1.01486, 0, 13.9632, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ei4ua")

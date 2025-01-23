@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ced6jnew5pral"]
+
+[ext_resource type="PackedScene" uid="uid://dmfbmk3257afw" path="res://assets/bochka.glb" id="1_wmcjr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2at1p"]
+size = Vector3(13.7573, 3.35647, 1.68686)
+
+[node name="bochka" type="StaticBody3D"]
+
+[node name="bochka" parent="." instance=ExtResource("1_wmcjr")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97942, 1.56868, 0.300494)
+shape = SubResource("BoxShape3D_2at1p")

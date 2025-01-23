@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://pg6q81hc27j8"]
+
+[ext_resource type="PackedScene" uid="uid://w4ys3il11rop" path="res://assets/BIGHOME.glb" id="1_2rkh5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h1eh4"]
+size = Vector3(7.04963, 4.51227, 7.17542)
+
+[node name="Big_house" type="StaticBody3D"]
+
+[node name="BIGHOME" parent="." instance=ExtResource("1_2rkh5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94332, 1.61241, -2.0919)
+shape = SubResource("BoxShape3D_h1eh4")

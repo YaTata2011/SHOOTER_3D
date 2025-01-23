@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6lvbho7q0pui"]
+
+[ext_resource type="Script" path="res://pig.gd" id="1_8poiy"]
+[ext_resource type="PackedScene" uid="uid://xwlitadvtyy7" path="res://assets/pig.glb" id="1_a5u1f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7xhub"]
+size = Vector3(1.94833, 4.70139, 7.99049)
+
+[node name="pig" type="CharacterBody3D" groups=["animal"]]
+script = ExtResource("1_8poiy")
+path_length = 20
+
+[node name="pig" parent="." instance=ExtResource("1_a5u1f")]
+
+[node name="Skeleton3D" parent="pig/Armature" index="0"]
+bones/0/rotation = Quaternion(0.312408, 4.94803e-08, 0.0104428, 0.949891)
+bones/1/rotation = Quaternion(-0.0631725, -0.00262941, -0.0101063, 0.997948)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(-0.636486, 9.26179e-08, -7.64307e-08, 0.771288)
+bones/4/rotation = Quaternion(0.101026, 6.89066e-12, 2.41546e-08, 0.994884)
+bones/5/rotation = Quaternion(-0.636486, 9.26179e-08, -7.64307e-08, 0.771288)
+bones/6/rotation = Quaternion(0.101026, 6.90974e-12, 2.41546e-08, 0.994884)
+bones/7/rotation = Quaternion(0.889242, -0.00732964, 0.00743827, -0.457319)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(0.378493, -8.69554e-10, -1.47371e-08, 0.925604)
+bones/9/rotation = Quaternion(0.889242, -0.00732962, 0.00743829, -0.457319)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
+
+[node name="AnimationPlayer" parent="pig" index="1"]
+autoplay = "move"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.185226, 2.26658, -0.136421)
+shape = SubResource("BoxShape3D_7xhub")
+
+[editable path="pig"]

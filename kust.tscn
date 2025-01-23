@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dokrf3x504dp1"]
+
+[ext_resource type="PackedScene" uid="uid://443mv6n121s3" path="res://assets/KUST.glb" id="1_8gtos"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_axbak"]
+radius = 1.65067
+height = 3.82113
+
+[node name="Kust" type="StaticBody3D"]
+
+[node name="KUST" parent="." instance=ExtResource("1_8gtos")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0358337, 1.09677, 2.1332)
+shape = SubResource("CapsuleShape3D_axbak")

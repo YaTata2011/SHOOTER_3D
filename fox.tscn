@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://fnrfqt35msri"]
+
+[ext_resource type="PackedScene" uid="uid://dy88n3lj26dlg" path="res://assets/lisa.glb" id="1_4gux5"]
+[ext_resource type="Script" path="res://fox.gd" id="1_kn553"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3ls6p"]
+radius = 1.37838
+height = 6.49717
+
+[node name="Fox" type="CharacterBody3D" groups=["animal"]]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -2.08539, 0)
+script = ExtResource("1_kn553")
+path_length = 15
+
+[node name="lisa" parent="." instance=ExtResource("1_4gux5")]
+
+[node name="Skeleton3D" parent="lisa/Armature" index="0"]
+bones/0/position = Vector3(0, -0.12156, 1.73465)
+bones/1/rotation = Quaternion(-0.132961, -1.18151e-07, 1.58502e-08, 0.991121)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(0.853683, 4.28767e-07, 5.12388e-07, 0.520792)
+bones/4/rotation = Quaternion(-0.162991, 1.18721e-07, -2.59315e-07, 0.986628)
+bones/5/rotation = Quaternion(0.853683, 5.52934e-07, 7.15924e-07, 0.520792)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(-0.162991, -1.1651e-07, -2.98176e-07, 0.986628)
+bones/7/rotation = Quaternion(0.90253, 1.54004e-07, 3.2277e-07, 0.430626)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(-0.4763, 2.09637e-07, -4.54235e-07, 0.879283)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/rotation = Quaternion(0.90253, 1.54004e-07, 3.2277e-07, 0.430626)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(-0.4763, 2.09637e-07, -4.54235e-07, 0.879283)
+bones/10/scale = Vector3(1, 1, 1)
+
+[node name="AnimationPlayer" parent="lisa" index="3"]
+autoplay = "MOVE_lisa"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0199385, 3.78468, -0.148229)
+shape = SubResource("CapsuleShape3D_3ls6p")
+
+[editable path="lisa"]

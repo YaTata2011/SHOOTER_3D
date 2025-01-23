@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://butl2lnmu27vp"]
+
+[ext_resource type="PackedScene" uid="uid://ms80tjt4gnd4" path="res://assets/ELKA.glb" id="1_m8ys4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b40fw"]
+radius = 0.704801
+height = 2.41069
+
+[node name="Elka" type="StaticBody3D"]
+
+[node name="ELKA" parent="." instance=ExtResource("1_m8ys4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62961, 0.025248)
+shape = SubResource("CapsuleShape3D_b40fw")

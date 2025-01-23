@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1y8ahclrvto6"]
+
+[ext_resource type="PackedScene" uid="uid://tjj54pcirv2a" path="res://assets/chast_kosmo_corabel.glb" id="1_v7ccj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3n56m"]
+size = Vector3(5.69394, 5.34257, 7.6418)
+
+[node name="cosmo_ship" type="StaticBody3D"]
+
+[node name="chast_kosmo_corabel" parent="." instance=ExtResource("1_v7ccj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.99987, -0.0161261, 0, 0.0161261, 0.99987, -0.0461065, 2.02375, -0.0155182)
+shape = SubResource("BoxShape3D_3n56m")

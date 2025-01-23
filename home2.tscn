@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://7yed1py2s6pl"]
+
+[ext_resource type="PackedScene" uid="uid://cblrmm8q55l5w" path="res://assets/BIGHOUSE2.glb" id="1_kvwc7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ki7w"]
+size = Vector3(36.8242, 25.9374, 42.8013)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="BIGHOUSE2" parent="." instance=ExtResource("1_kvwc7")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.145, 12.4687, -9.94799)
+shape = SubResource("BoxShape3D_4ki7w")

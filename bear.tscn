@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2oek7os4yk75"]
+
+[ext_resource type="Script" path="res://bear.gd" id="1_1wg41"]
+[ext_resource type="PackedScene" uid="uid://4o5ycc28wimt" path="res://assets/bear.glb" id="1_ufnf7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_chhq4"]
+radius = 1.8712
+height = 5.83185
+
+[node name="Bear" type="CharacterBody3D" groups=["animal"]]
+script = ExtResource("1_1wg41")
+path_length = 30
+
+[node name="bear" parent="." instance=ExtResource("1_ufnf7")]
+
+[node name="Skeleton3D" parent="bear/Armature" index="0"]
+bones/0/position = Vector3(0, -0.0434498, -0.126693)
+bones/1/rotation = Quaternion(-0.0825239, 1.18803e-07, -9.83761e-09, 0.996589)
+bones/2/rotation = Quaternion(-0.216643, 2.71961e-14, -5.16516e-08, 0.976251)
+bones/3/rotation = Quaternion(-0.654531, -2.26079e-09, -1.58664e-07, 0.756035)
+bones/4/rotation = Quaternion(0.510695, 1.764e-09, 1.24729e-07, 0.859762)
+bones/5/rotation = Quaternion(-0.654531, -2.26077e-09, -1.58664e-07, 0.756035)
+bones/6/rotation = Quaternion(0.510695, 1.76399e-09, 1.24729e-07, 0.859762)
+bones/7/rotation = Quaternion(-0.782106, 7.42847e-08, -9.32343e-08, 0.623145)
+bones/8/rotation = Quaternion(0.645469, -3.55421e-15, 1.53892e-07, 0.763787)
+bones/9/rotation = Quaternion(-0.782106, 7.42847e-08, -9.32343e-08, 0.623145)
+bones/10/rotation = Quaternion(0.645469, -3.55421e-15, 1.53892e-07, 0.763787)
+
+[node name="AnimationPlayer" parent="bear" index="1"]
+autoplay = "move"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0785461, 0.996911, 0, -0.996911, 0.0785461, 0, 1.43646, 0)
+shape = SubResource("CapsuleShape3D_chhq4")
+
+[editable path="bear"]
