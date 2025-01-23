@@ -1,1 +1,1 @@
-# SHOOTER_3D
+# SHOOTER_3D: Godot + Blender
